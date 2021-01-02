@@ -387,17 +387,25 @@
   }
 
   .u-section-3 .u-layout-wrap-1 {
-    width: calc(((100% - 340px) / 2) + 390px);
+    width: 440px;
     margin-top: 22px;
     margin-left: 0;
     margin-right: 0;
   }
 
+  .u-section-3 .u-layout-cell-1 {
+    min-height: 237px;
+  }
+
+  .u-section-3 .u-layout-cell-2 {
+    min-height: 237px;
+  }
+
   .u-section-3 .u-layout-wrap-2 {
+    width: 440px;
     margin-top: 11px;
-    width: auto;
-    margin-right: initial;
-    margin-left: initial;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .u-section-3 .u-layout-cell-3 {
