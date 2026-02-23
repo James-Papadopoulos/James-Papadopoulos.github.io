@@ -40,8 +40,8 @@ a {
     justify-content: space-between;
     gap: 20px;
     font-size: .9rem;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .navbar .logo {
