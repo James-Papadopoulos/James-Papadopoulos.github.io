@@ -26,9 +26,8 @@ img {
     padding: 10px 20px;
 }
 
-/* UPDATED: dark navbar to match hero */
 .navbar {
-    background: #1c2230;
+    background: whitesmoke;
 }
 
 a {
@@ -52,16 +51,14 @@ a {
     font-size: 1rem;
 }
 
-/* UPDATED: white logo text on dark bg */
 .navbar .logo b {
-    color: #f0eeeb;
+    color: #0C2340;
 }
 
 .navbar img {
     width: 40px;
 }
 
-/* UPDATED: dark hero background */
 .hero {
     padding-top: 0.5rem;
     padding-bottom: 1.5rem;
@@ -86,7 +83,6 @@ h2 {
     font-weight: 900;
 }
 
-/* UPDATED: light text on dark hero */
 .hero .texts h2,
 .hero .texts p {
     color: #f0eeeb;
@@ -98,7 +94,6 @@ h2 {
     font-size: 1.1rem;
 }
 
-/* UPDATED: rounded photo, no shadow on dark bg */
 .hero img {
     border-radius: 14px;
     box-shadow: none;
@@ -136,7 +131,6 @@ h2 {
     font-size: 1.5rem;
 }
 
-/* UPDATED: video section matches hero dark tone */
 .demo {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -199,7 +193,6 @@ h2 {
     width: 100%;
 }
 
-/* UPDATED: light contact section stands out between dark sections */
 .contact {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
@@ -256,7 +249,6 @@ h2 {
     margin-bottom: 2rem;
 }
 
-/* UPDATED: dark resume/linkedin section */
 .resume {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -270,7 +262,6 @@ h2 {
     font-weight: 700;
 }
 
-/* UPDATED: light text on dark bg */
 .resume p {
     color: #f0eeeb;
 }
@@ -287,7 +278,6 @@ h2 {
 }
 
 @media (max-width:820px) {
-    /* UPDATED: dark on mobile too */
     .resume {
         background-color: #1c2230;
     }
@@ -344,12 +334,10 @@ h2 {
         font-size: 169px;
     }
 
-    /* UPDATED: dark video section on mobile */
     .demo {
         background-color: #1c2230;
     }
 
-    /* UPDATED: light contact on mobile */
     .contact {
         background-color: whitesmoke;
     }
