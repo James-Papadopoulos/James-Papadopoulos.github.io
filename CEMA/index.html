@@ -96,19 +96,49 @@
             transform: translateX(5px);
         }
  
-        /* Portrait, sitting under the LinkedIn cue. Capped so it
-           never dominates the page on a phone. */
-        .cema-portrait {
+        /* ---- LinkedIn block + portrait -------------------------
+           Mobile: text, then photo beneath it, full width.
+           Desktop: photo becomes the left column, text on the right.
+           The wrapper owns the rules so the pair reads as one unit.
+           -------------------------------------------------------- */
+        .cema-connect {
             border-top: 1px solid var(--cema-line);
             border-bottom: 1px solid var(--cema-line);
-            padding: 30px 0;
+            padding: 34px 0;
+        }
+ 
+        .cema-connect .cema-cue {
+            border-top: none;
+            padding: 0;
+        }
+ 
+        .cema-portrait {
+            margin-top: 30px;
         }
  
         .cema-portrait img {
             display: block;
             width: 100%;
-            max-width: 240px;
             height: auto;
+        }
+ 
+        @media (min-width: 820px) {
+            .cema-connect {
+                display: grid;
+                grid-template-columns: minmax(280px, 380px) 1fr;
+                gap: 52px;
+                align-items: center;
+                padding: 44px 0;
+            }
+ 
+            .cema-portrait {
+                order: -1;
+                margin-top: 0;
+            }
+ 
+            .cema-connect .cema-cue-note {
+                max-width: 46ch;
+            }
         }
  
         .cema-more {
@@ -169,16 +199,16 @@
                 <span class="cema-cue-go">View the presentation</span>
             </a>
  
-            <!-- ===== 3. LINKEDIN ===== -->
-            <a class="cema-cue" href="https://www.linkedin.com/in/jamesapapadopoulos/" target="_blank" rel="noopener">
-                <span class="cema-cue-title">Let's Connect on LinkedIn!</span>
-                <span class="cema-cue-note">CEMA Summit is THE place for us to network, so let's get connected on LinkedIn!</span>
-                <span class="cema-cue-go">Connect on LinkedIn</span>
-            </a>
- 
-            <!-- ===== PHOTO ===== -->
-            <div class="cema-portrait">
-                <img src="../images/JAMES_PHOTO.jpg" alt="Photo of James">
+            <!-- ===== 3. LINKEDIN + PHOTO ===== -->
+            <div class="cema-connect">
+                <a class="cema-cue" href="https://www.linkedin.com/in/jamesapapadopoulos/" target="_blank" rel="noopener">
+                    <span class="cema-cue-title">Let's Connect on LinkedIn!</span>
+                    <span class="cema-cue-note">CEMA Summit is THE place for us to network, so let's get connected on LinkedIn!</span>
+                    <span class="cema-cue-go">Connect on LinkedIn</span>
+                </a>
+                <div class="cema-portrait">
+                    <img src="../images/JAMES_PHOTO.jpg" alt="Photo of James">
+                </div>
             </div>
  
         </div>
