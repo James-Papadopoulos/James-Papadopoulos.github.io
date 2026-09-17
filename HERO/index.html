@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stop Making Your Events About You | James Papadopoulos</title>
+    <title>Stop Making Your Events About Your Brand | James Papadopoulos</title>
     <meta name="description" content="Watch the full session on designing keynotes, content, and attendee-centric event experiences, plus download the Attendee Framework Playbook.">
-    <meta property="og:title" content="Stop Making Your Events About You | James Papadopoulos">
+    <meta property="og:title" content="Stop Making Your Events About Your Brand | James Papadopoulos">
     <meta property="og:description" content="Watch the full session on designing keynotes, content, and attendee-centric event experiences, plus download the Attendee Framework Playbook.">
     <meta property="og:image" content="https://www.jamespapadopoulos.com/images/JAMES_PHOTO.jpg">
     <meta property="og:url" content="https://www.jamespapadopoulos.com/cema">
@@ -19,9 +19,6 @@
         /* =========================================================
            CEMA page only. Everything here is prefixed .cema- so it
            can't collide with anything in app.css.
-
-           ONE THING TO SET: --cema-ink below. Make it your site's
-           main dark color and the whole page follows.
            ========================================================= */
         :root {
             --cema-ink: #1a1a1a;
@@ -29,8 +26,36 @@
             --cema-quiet: rgba(0, 0, 0, .58);
         }
 
+        /* Full-width video breakout container */
+        .cema-video-hero {
+            width: 100%;
+            max-width: 1100px;
+            margin: 40px auto 0;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .cema-video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            background: #000;
+        }
+
+        .cema-video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
         .cema-cues {
-            padding: 10px 0 70px;
+            padding: 40px 0 70px;
         }
 
         .cema-cue {
@@ -96,11 +121,7 @@
             transform: translateX(5px);
         }
 
-        /* ---- LinkedIn block + portrait -------------------------
-           Mobile: text, then photo beneath it, full width.
-           Desktop: photo becomes the left column, text on the right.
-           The wrapper owns the rules so the pair reads as one unit.
-           -------------------------------------------------------- */
+        /* ---- LinkedIn block + portrait ---- */
         .cema-connect {
             border-top: 1px solid var(--cema-line);
             border-bottom: 1px solid var(--cema-line);
@@ -152,7 +173,6 @@
         }
 
         @media (prefers-reduced-motion: reduce) {
-
             .cema-cue,
             .cema-cue-go::after {
                 transition: none;
@@ -171,29 +191,31 @@
         </div>
     </nav>
 
+    <!-- HERO TEXT SECTION -->
     <div class="hero" id="who">
         <div class="container">
             <div class="texts">
                 <div>
-                    <h2>Stop Making Your Events About You</h2>
-                    <p>When attendees feel like the hero, they pay more attention, remember more, and tell more people about your event. Watch the full session below and grab the complete framework playbook.</p>
+                    <h2>Stop Making Your Events About Your Brand</h2>
+                    <p>When you stop pitching your brand and start positioning your attendee as the hero, engagement changes completely. Watch the full session below and grab the framework playbook.</p>
                 </div>
             </div>
-
-            <!-- VIMEO EMBED CONTAINER -->
-            <div style="padding:56.25% 0 0 0;position:relative;margin-top:30px;border-radius:8px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.15);">
-                <iframe src="https://player.vimeo.com/video/1227831183?h=b78941922a&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1" 
-                        frameborder="0" 
-                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        style="position:absolute;top:0;left:0;width:100%;height:100%;" 
-                        title="How To Make Attendees The Hero">
-                </iframe>
-            </div>
-            <script src="https://player.vimeo.com/api/player.js"></script>
         </div>
     </div>
 
+    <!-- LARGE BREAKOUT VIDEO CONTAINER -->
+    <div class="cema-video-hero">
+        <div class="cema-video-wrapper">
+            <iframe src="https://player.vimeo.com/video/1227831183?h=b78941922a&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1" 
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    title="How To Make Attendees The Hero">
+            </iframe>
+        </div>
+    </div>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+
+    <!-- DOWNLOADS & RESOURCES -->
     <div class="cema-cues">
         <div class="container">
 
@@ -201,7 +223,7 @@
             <a class="cema-cue" href="https://docs.google.com/document/d/1gOROl20MPSjimAILIZ60KaI_FjfdG9lT_ci6BzeqnTw/edit?usp=sharing" target="_blank" rel="noopener">
                 <span class="cema-cue-label">FREE RESOURCE</span>
                 <span class="cema-cue-title">The Attendee Playbook</span>
-                <span class="cema-cue-note">Six practical sections to help you keep the attendee at the center of your event experience, from initial invite to post-event follow-up. Includes ready-to-use AI prompts you can copy directly into ChatGPT or Claude.</span>
+                <span class="cema-cue-note">Six practical sections to help you shift focus away from corporate agenda items and put your attendee at the center of the experience. Includes ready-to-use AI prompts you can paste straight into ChatGPT or Claude.</span>
                 <span class="cema-cue-go">Open the Playbook</span>
             </a>
 
@@ -209,7 +231,7 @@
             <a class="cema-cue" href="../images/CEMA%20Summit%202026%20Session%20Slides%20-%20The%20Attendee%20Is%20The%20Hero.pdf" target="_blank" rel="noopener">
                 <span class="cema-cue-label">SLIDE DECK</span>
                 <span class="cema-cue-title">Presentation Slides</span>
-                <span class="cema-cue-note">Download the original visual deck from the session. Feel free to use these frameworks for your own internal event planning.</span>
+                <span class="cema-cue-note">Download the visual deck from the session. Use these frameworks to challenge your team's internal event positioning.</span>
                 <span class="cema-cue-go">Download the Slides</span>
             </a>
 
@@ -217,7 +239,7 @@
             <div class="cema-connect">
                 <a class="cema-cue" href="https://www.linkedin.com/in/jamesapapadopoulos/" target="_blank" rel="noopener">
                     <span class="cema-cue-title">Let's Connect on LinkedIn</span>
-                    <span class="cema-cue-note">I share strategy breakdowns on live production, event architecture, and corporate content creation. Drop me a connection request!</span>
+                    <span class="cema-cue-note">I share strategy breakdowns on live production, event architecture, and executive content creation. Drop me a connection request!</span>
                     <span class="cema-cue-go">Connect on LinkedIn</span>
                 </a>
                 <div class="cema-portrait">
